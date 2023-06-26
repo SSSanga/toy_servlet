@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class commons {
     public Statement getStatement(){
-        String url = "jdbc:mysql://192.168.0.31:3306/db_polls";
+        String url = "jdbc:mysql://192.168.0.31:3306/db_pollsservlet";
         String user = "yojulab";
         String password ="!yojulab*";
          Statement statement = null;
