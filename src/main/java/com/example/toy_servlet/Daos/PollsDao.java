@@ -16,6 +16,7 @@ public class PollsDao {
     // Statement statement = commons.getStatement();
     // String query = "";
 
+// 상아 답안 불러오기
     public ArrayList selectAll() {
         ArrayList arraylist = new ArrayList();
         try {
@@ -37,7 +38,7 @@ public class PollsDao {
         }
         return arraylist;
     }
-
+//상아 설문질문 불러오기
     public ArrayList SelectQuest() {
         ArrayList arraylist = new ArrayList();
         try {
@@ -59,34 +60,12 @@ public class PollsDao {
         return arraylist;
     }
 
-    // public ArrayList pollAnswer() {
-    // // 질문과 답항을 불러오자
-    // // 1. 먼저 답을 불러오자_hashmap을 arraylist로 넣는다.
-    // // 참고 FactorysDao.java
 
-    // ArrayList arraylist = new ArrayList();
-    // Commons commons = new Commons();
-    // Statement statement = commons.getStatement();
-    // String query = "";
-
-    // try {
-    // query = "SELECT * FROM db_pollsservlet.choic";
-    // ResultSet resultset = statement.executeQuery(query);
-    // HashMap hashmap = new HashMap<>();
-    // while (resultset.next()) {
-    // hashmap = new HashMap();
-    // hashmap.put("CHOICE", resultset.getString("CHOICE"));
-    // hashmap.put("CHOICE_ID", resultset.getString("CHOICE_ID"));
-    // arraylist.add(hashmap);
-    // }
-
-    // } catch (Exception e) {
-    // // TODO: handle exception
-    // }
-    // return arraylist;
-    // }
 
     // 회원DB연결 메소드(혜인)
+
+    // 회원리스트 메소드(혜인)
+
     public ArrayList SelectMembers() {
         ArrayList membersList = new ArrayList<>();
         try {
@@ -97,8 +76,8 @@ public class PollsDao {
             statement.executeQuery(query);
             ResultSet resultSet = statement.executeQuery(query);
 
-            HashMap members = new HashMap<>();
-            while (resultSet.next()) {
+            HashMap<String, String> members = new HashMap<>();
+            while(resultSet.next()) {
                 members = new HashMap<>();
                 members.put("ID", "ID");
                 members.put("RESPONDENTS", "RESPONDENTS");
@@ -116,4 +95,33 @@ public class PollsDao {
         return membersList;
     }
 
+    public ArrayList InfoMembers(String name) {
+        ArrayList membersList = new ArrayList<>();
+        try {
+            Commons commons = new Commons();
+            Statement statement = commons.getStatement();
+            String query = "SELECT *\n" + //
+                    "FROM respondents\n" + //
+                    "WHERE RESPONDENTS LIKE '"+name+"';";
+            statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(query);
+
+            HashMap<String, String> members = new HashMap<>();
+            while(resultSet.next()) {
+                members = new HashMap<>();
+                members.put("ID", "ID");
+                members.put("RESPONDENTS", "RESPONDENTS");
+                members.put("PASSWORD", "PASSWORD");
+                members.put("AGE", "AGE");
+                members.put("GENDER", "GENDER");
+                members.put("ADDRESS", "ADDRESS");
+
+                membersList.add(members);
+
+            }
+        } catch (Exception e) {
+           
+        }
+        return membersList;
+    }
 }
