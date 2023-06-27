@@ -31,19 +31,21 @@ public class PollsDao {
                 hashmap.put("QUESTIONS", resultset.getString("QUESTIONS"));
                 arraylist.add(hashmap);
             }
-
-
         } catch (Exception e) {
             // TODO: handle exception
         }
-        return null;
+        return arraylist;
     }
 
     public ArrayList pollAnswer() {
         // 질문과 답항을 불러오자
         // 1. 먼저 답을 불러오자_hashmap을 arraylist로 넣는다.
         // 참고 FactorysDao.java
+        
         ArrayList arraylist = new ArrayList();
+        Commons commons = new Commons();
+        Statement statement = commons.getStatement();
+        String query = "";
 
         try {
             query = "SELECT CHOICE FROM choice;";
@@ -60,4 +62,17 @@ public class PollsDao {
         }
         return arraylist;
     }
+
+    // 회원DB연결 메소드(혜인)
+    public ArrayList SelectMembers() {
+        try {
+            Commons commons = new Commons();
+            Statement statement = commons.getStatement();
+        } catch (Exception e) {
+           
+        }
+        return null;
+    }
+
+   
 }
