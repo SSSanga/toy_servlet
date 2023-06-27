@@ -12,15 +12,11 @@ public class commons {
         String url = "jdbc:mysql://192.168.0.31:3306/db_pollsservlet";
         String user = "yojulab";
         String password ="!yojulab*";
-         Statement statement = null;
         
+        Statement statement = null;
         try {
-            
             Connection connection = DriverManager.getConnection(url, user, password);
             statement = connection.createStatement();
-
-            
-            
         } catch (Exception e) {
             e.printStackTrace();
         }
