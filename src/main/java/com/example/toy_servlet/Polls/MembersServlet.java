@@ -23,10 +23,10 @@ public class MembersServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            PollsDao pollsDao = new PollsDao();
-            ArrayList List = new ArrayList();
-            List = pollsDao.SelectMembers();
-            
+            // PollsDao pollsDao = new PollsDao();
+            // ArrayList List = new ArrayList();
+            // List = pollsDao.SelectMembers();
+
 
             response.setContentType("text/html;charset=UTF-8");
             // 다음 파일 호출  

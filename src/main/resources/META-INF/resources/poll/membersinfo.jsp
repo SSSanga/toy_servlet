@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
     <title>회원정보</title>
 </head>
-<body>      
-          </div>
+<body>
     <div class="container justify-content-center mt-5">
         <table class="table table-bordered table-hover">
             <thead>
+                
                   <th>아이디</th>
                   <th>이름</th>
                   <th>비밀번호</th>
@@ -22,15 +22,27 @@
                   <th>주소</th>
                 </tr>
             </thead>
+            <%
+            ArrayList infor = new ArrayList();
+            infor = (ArrayList) request.getAttribute("infor");
+            %>
             <tbody>
+                <% for(int i=0; i< infor.size(); i=i+1) { %>
+                    <%
+                    HashMap InforRecord = new HashMap<>();
+                    InforRecord = (HashMap) infor.get(i);
+                    %>
+                <form>
                 <tr>
-                    <th>aaa999</th>
-                    <td>홍길동</td>
-                    <td>@1234</td>
-                    <td>23</td>
-                    <td>남</td>
-                    <td>서울시</td>
-                  </tr>
+                    <td><%= InforRecord.get("ID") %></td>
+                    <td><%= InforRecord.get("RESPONDENTS") %></td>
+                    <td><%= InforRecord.get("PASSWORD") %></td>
+                    <td><%= InforRecord.get("AGE") %></td>
+                    <td><%= InforRecord.get("GENDER") %></td>
+                    <td><%= InforRecord.get("ADDRESS") %></td>
+                </tr>
+                </form>
+            <% } %>
             </tbody>
         </table>
     </div>

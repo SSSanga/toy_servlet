@@ -33,19 +33,19 @@
                 <td>2</td>
                 <td>bbb888</td>
                 <td>장길산</td>
-                <td><button type="submit" name="name" value="장길산" formaction="/poll/membersinfo.jsp" class="btn  btn-primary btn-sm">보기</button></td>
+                <td><button type="submit" name="name" value="장길산" formaction="/MembersInfoServlet" class="btn  btn-primary btn-sm">보기</button></td>
               </tr>
               <tr>
                 <td>3</td>
                 <td>ccc777</td>
                 <td>신사임당</td>
-                <td><button type="submit" name="name" value="신사임당" formaction="/poll/membersinfo.jsp" class="btn  btn-primary btn-sm">보기</button></td>
+                <td><button type="submit" name="name" value="신사임당" formaction="/MembersInfoServlet" class="btn  btn-primary btn-sm">보기</button></td>
               </tr>
               <tr>
                 <td>4</td>
                 <td>ddd666</td>
                 <td>김철수</td>
-                <td><button type="submit" name="name" value="김철수" formaction="/poll/membersinfo.jsp" class="btn  btn-primary btn-sm">보기</button></td>
+                <td><button type="submit" name="name" value="김철수" formaction="/MembersInfoServlet" class="btn  btn-primary btn-sm">보기</button></td>
               </tr>
             </form>
           </tbody>
