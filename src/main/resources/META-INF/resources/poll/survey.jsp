@@ -158,11 +158,13 @@
        <br>
        <thead>
         <tr>
-            <td><button class="btn btn-success" type="submit",name ="answer", value="(1)전혀아니다">제출</button></td>
+            <td><button class="btn btn-success" type="submit",name ="">제출</button></td>
         </tr>
        </thead>
     </form>
     </div>
+    <!-- 제출을 하면 설문자에 대한 1번 질문에대한 답, 2번 질문에 대한 답이 들어가야함.  -->
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
