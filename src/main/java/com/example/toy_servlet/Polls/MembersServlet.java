@@ -26,9 +26,10 @@ public class MembersServlet extends HttpServlet {
             PollsDao pollsDao = new PollsDao();
             ArrayList List = new ArrayList();
             List = pollsDao.SelectMembers();
+            
 
             response.setContentType("text/html;charset=UTF-8");
-            //다음 파일 호출  
+            // 다음 파일 호출  
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/members.jsp");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {

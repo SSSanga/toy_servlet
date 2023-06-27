@@ -1,6 +1,7 @@
-package com.example.toy_servlet.Polls;
+package com.example.toy_servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -18,15 +19,16 @@ public class MembersInfoServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
+            String name = request.getParameter("name");
             PollsDao pollsDao = new PollsDao();
-            ArrayList membersList = new ArrayList();
-            membersList = pollsDao.SelectMembers();
-            
-            request.setAttribute("membersList", membersList);
+            ArrayList infor = new ArrayList();
+            infor = pollsDao.InfoMembers(name);
+
+            request.setAttribute("name",name);
 
             response.setContentType("text/html;charset=UTF-8");
-            //다음 파일 호출  
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Daos/PollsDao.java");
+            // 다음 파일 호출  
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/members.jsp");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());

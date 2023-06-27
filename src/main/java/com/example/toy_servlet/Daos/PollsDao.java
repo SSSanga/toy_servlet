@@ -92,4 +92,34 @@ public class PollsDao {
         }
         return membersList;
     }
+
+    public ArrayList InfoMembers(String name) {
+        ArrayList membersList = new ArrayList<>();
+        try {
+            Commons commons = new Commons();
+            Statement statement = commons.getStatement();
+            String query = "SELECT *\n" + //
+                    "FROM respondents\n" + //
+                    "WHERE RESPONDENTS LIKE '"+name+"';";
+            statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(query);
+
+            HashMap<String, String> members = new HashMap<>();
+            while(resultSet.next()) {
+                members = new HashMap<>();
+                members.put("ID", "ID");
+                members.put("RESPONDENTS", "RESPONDENTS");
+                members.put("PASSWORD", "PASSWORD");
+                members.put("AGE", "AGE");
+                members.put("GENDER", "GENDER");
+                members.put("ADDRESS", "ADDRESS");
+
+                membersList.add(members);
+
+            }
+        } catch (Exception e) {
+           
+        }
+        return membersList;
+    }
 }
