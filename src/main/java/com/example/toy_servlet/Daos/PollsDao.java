@@ -71,7 +71,7 @@ public class PollsDao {
         } catch (Exception e) {
            
         }
-        return null;
+        return arrayList;
     }
 
    

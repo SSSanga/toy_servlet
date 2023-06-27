@@ -11,7 +11,7 @@
 
 <body>
     <div class="container">
-        <form action="statistics.html">
+        <form action="/surveyServlet">
        <thead>
         <tr>
             <td>
