@@ -2,12 +2,15 @@ package com.example.toy_servlet.Daos;
 
 import java.util.ArrayList;
 
+import com.example.toy_servlet.Commons.Commons;
+
 
 // 각자 필요한 DB의 Method? 구문 쓰기. 
 // 참고_with Teacher OptioninforsDao.java, FactorysDao.java
 
 
 public class PollsDao {
+    Commons commons = new Commons();
     
     pulic ?? pollQuestion(){
         //질문과 답항을 불러오자
@@ -21,4 +24,5 @@ public class PollsDao {
         }
         return ;
     }
+    public
 }
