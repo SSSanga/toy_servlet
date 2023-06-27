@@ -89,7 +89,7 @@ public class PollsDao {
 
             }
         } catch (Exception e) {
-
+           System.out.println(e.getMessage());
         }
         return membersList;
     }
@@ -108,18 +108,18 @@ public class PollsDao {
             HashMap<String, String> members = new HashMap<>();
             while (resultSet.next()) {
                 members = new HashMap<>();
-                members.put("ID", "ID");
-                members.put("RESPONDENTS", "RESPONDENTS");
-                members.put("PASSWORD", "PASSWORD");
-                members.put("AGE", "AGE");
-                members.put("GENDER", "GENDER");
-                members.put("ADDRESS", "ADDRESS");
+                members.put("ID", resultSet.getString("ID"));
+                members.put("RESPONDENTS", resultSet.getString("RESPONDENTS"));
+                members.put("PASSWORD", resultSet.getString("PASSWORD"));
+                members.put("AGE", resultSet.getString("AGE"));
+                members.put("GENDER", resultSet.getString("GENDER"));
+                members.put("ADDRESS", resultSet.getString("ADDRESS"));
 
                 membersList.add(members);
 
             }
         } catch (Exception e) {
-
+           System.out.println(e.getMessage());
         }
         return membersList;
     }
