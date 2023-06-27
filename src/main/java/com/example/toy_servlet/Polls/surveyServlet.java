@@ -1,4 +1,4 @@
-package com.example.toy_servlet.Poll;
+package com.example.toy_servlet.Polls;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,8 +29,10 @@ public class surveyServlet extends HttpServlet {
             arrayquest = pollsDao.SelectQuest();
             for (int second = 0; second < arrayquest.size(); second = second + 1) {
                 hashmap = (HashMap) arrayquest.get(second);
-                contents = contents + (String) hashmap.get("QUESTIONS");
-                
+                contents = contents + (String) hashmap.get("QUESTIONS"); // 질문1개 나오면 다음 selectAll로 넘어가서 CHOICE 출력한다.
+
+                request.setAttribute("arrayquest", arrayquest);
+
                 printWriter.println();
                 ArrayList arraychoice = new ArrayList();
                 arraychoice = pollsDao.selectAll(); // 답안=CHOICE 출력_HASHMAP으로 풀다
@@ -38,7 +40,7 @@ public class surveyServlet extends HttpServlet {
 
                     hashmap = (HashMap) arraychoice.get(first);
                     contents = contents + (String) hashmap.get("CHOICE");
-
+                    request.setAttribute("arraychoice", arraychoice);
                 }
 
             }

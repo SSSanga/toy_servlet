@@ -16,7 +16,7 @@ public class PollsDao {
     // Statement statement = commons.getStatement();
     // String query = "";
 
-// 상아 답안 불러오기
+    // 상아 답안 불러오기
     public ArrayList selectAll() {
         ArrayList arraylist = new ArrayList();
         try {
@@ -38,7 +38,8 @@ public class PollsDao {
         }
         return arraylist;
     }
-//상아 설문질문 불러오기
+
+    // 상아 설문질문 불러오기
     public ArrayList SelectQuest() {
         ArrayList arraylist = new ArrayList();
         try {
@@ -60,8 +61,6 @@ public class PollsDao {
         return arraylist;
     }
 
-
-
     // 회원DB연결 메소드(혜인)
 
     // 회원리스트 메소드(혜인)
@@ -77,7 +76,7 @@ public class PollsDao {
             ResultSet resultSet = statement.executeQuery(query);
 
             HashMap<String, String> members = new HashMap<>();
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 members = new HashMap<>();
                 members.put("ID", "ID");
                 members.put("RESPONDENTS", "RESPONDENTS");
@@ -102,12 +101,12 @@ public class PollsDao {
             Statement statement = commons.getStatement();
             String query = "SELECT *\n" + //
                     "FROM respondents\n" + //
-                    "WHERE RESPONDENTS LIKE '"+name+"';";
+                    "WHERE RESPONDENTS LIKE '" + name + "';";
             statement.executeQuery(query);
             ResultSet resultSet = statement.executeQuery(query);
 
             HashMap<String, String> members = new HashMap<>();
-            while(resultSet.next()) {
+            while (resultSet.next()) {
                 members = new HashMap<>();
                 members.put("ID", "ID");
                 members.put("RESPONDENTS", "RESPONDENTS");
@@ -120,8 +119,29 @@ public class PollsDao {
 
             }
         } catch (Exception e) {
-           
+
         }
         return membersList;
+    }
+
+    public int replyCount() {
+        // 임의 statistic
+        try {
+            Commons commons = new Commons();
+            Statement statement = commons.getStatement();
+            String query = "SELECT COUNT(*)\n" + //
+                    "FROM statistics\n" + //
+                    "WHERE RESPONDENTS_ID ='R-01'";
+            ResultSet resultSet = statement.executeQuery(query);
+            HashMap collect = new HashMap<>();
+            while (resultSet.next()) {
+                System.out.println(resultSet.getInt("RESPONDENTS_ID"));
+
+            }
+
+        } catch (Exception e) {
+
+        }
+        return 0;
     }
 }

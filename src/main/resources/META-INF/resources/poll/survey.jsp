@@ -13,21 +13,36 @@
 <body>
 
     <div class="container">
+        <!-- <form action ="/surveyServletJSPing"> -->
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>QUESTION</th>
                 </tr>
             </thead>
+            <% ArrayList arrayquest = new ArrayList<>(); %>
+            <% arrayquest=(ArrayList)request.getAttribute("arrayquest"); %>
             <tbody>
+                <% for (int second = 0; second < arrayquest.size(); second = second + 1) { %>
+                    <% HashMap hashmap = new HashMap<>(); %>
+                    <% hashmap = (HashMap) arrayquest.get(second); %>
+                    <%= hashmap.get("QUESTIONS") %>
                 <tr>
                     <td>ANSWER</td>
                     <td>
+                        <% ArrayList arraychoice = new ArrayList<>(); %>
+                        <% arraychoice=(ArrayList)request.getAttribute("arraychoice"); %>
+
                         <tr>
-                            <td> <div class="form-check">
+                            <td> 
+                                <div class="form-check">
                                 <input id="q1answer1" name="q1answer" type="radio" class="form-check-input" checked="" required="">
-                                <label class="form-check-label" for="credit" id="q1answer1">(1)전혀아니다</label>
-                            </div> </td>
+                                <% for (int first = 0; first < arraychoice.size(); first = first + 1) { %>
+                                    <% hashmap = (HashMap) arraychoice.get(first); %>
+                                <label class="form-check-label" for="credit" id="q1answer1"><%= hashmap.get("CHOICE") %></label>
+                            </div> 
+                            <% } %>
+                        </td>
                         </tr>
                         <tr>
                             <td> <div class="form-check">
@@ -50,7 +65,13 @@
                         </tr>
                     </td>
                 </tr>
+                <tr>
+                    <form action = "/surveyStatistic">
+                    <td><button class="btn btn-success" type="submit",name ="answer", value="">제출</button></td>
+                </form>
+                </tr>
             </tbody>
+        <!-- </form> -->
         </table>
     </div>
 
