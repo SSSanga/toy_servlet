@@ -1,4 +1,4 @@
-package main.java.com.example.toy_servlet.Filters;
+package com.example.toy_servlet.Filters;
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -10,7 +10,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 @WebFilter("/*") // 모든 URL 패턴에 필터를 적용합니다.
-public class SessionFilter implements Filter {
+public class SessionFilter implements Filter  {
     
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -23,7 +23,7 @@ public class SessionFilter implements Filter {
             // chain.doFilter(request, response);
             
             // 만약 필터 체인의 마지막 필터인 경우, 아래의 코드를 사용하여 실제 서블릿으로 제어를 전달할 수도 있습니다.
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/Mainpage");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/LoginPage");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
