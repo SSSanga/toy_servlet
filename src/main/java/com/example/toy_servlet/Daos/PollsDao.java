@@ -1,7 +1,9 @@
 package com.example.toy_servlet.Daos;
 
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.example.toy_servlet.Commons.Commons;
 
@@ -12,13 +14,32 @@ public class PollsDao {
 
     // 회원DB연결 메소드(혜인)
     public ArrayList SelectMembers() {
+        ArrayList membersList = new ArrayList<>();
         try {
             Commons commons = new Commons();
             Statement statement = commons.getStatement();
+            String query = "SELECT *\n" + //
+                    "FROM db_pollsservlet.respondents;";
+            statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(query);
+
+            HashMap members = new HashMap<>();
+            while(resultSet.next()) {
+                members = new HashMap<>();
+                members.put("ID", "ID");
+                members.put("RESPONDENTS", "RESPONDENTS");
+                members.put("PASSWORD", "PASSWORD");
+                members.put("AGE", "AGE");
+                members.put("GENDER", "GENDER");
+                members.put("ADDRESS", "ADDRESS");
+
+                membersList.add(members);
+
+            }
         } catch (Exception e) {
            
         }
-        return arrayList;
+        return membersList;
     }
 
     // 설문 sevlet(상아)
