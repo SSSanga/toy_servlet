@@ -16,54 +16,54 @@ public class PollsDao {
     Statement statement = commons.getStatement();
     String query = "";
 
-    public ArrayList pollQuestion() {
-        ArrayList arraylist = new ArrayList();
-        try { // 질문과 답항을 불러오자
-              // 2. 질문을 불러온다.
-              // 참고 FactorysDao.java
-              // 질문을 1개 부른 다음 pollAnswer를 hashmap으로 푼다.
-              //구지 이렇게 안해도 되는듯. 
-              query = "";
-              ResultSet resultset = statement.executeQuery(query);
-            HashMap hashmap = new HashMap<>();
-            while (resultset.next()) {
-                hashmap = new HashMap();
-                hashmap.put("QUESTIONS", resultset.getString("QUESTIONS"));
-                arraylist.add(hashmap);
-            }
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-        return arraylist;
-    }
+    // public ArrayList pollQuestion() {
+    //     ArrayList arraylist = new ArrayList();
+    //     try { // 질문과 답항을 불러오자
+    //           // 2. 질문을 불러온다.
+    //           // 참고 FactorysDao.java
+    //           // 질문을 1개 부른 다음 pollAnswer를 hashmap으로 푼다.
+    //           //구지 이렇게 안해도 되는듯. 
+    //           query = "";
+    //           ResultSet resultset = statement.executeQuery(query);
+    //         HashMap hashmap = new HashMap<>();
+    //         while (resultset.next()) {
+    //             hashmap = new HashMap();
+    //             hashmap.put("QUESTIONS", resultset.getString("QUESTIONS"));
+    //             arraylist.add(hashmap);
+    //         }
+    //     } catch (Exception e) {
+    //         // TODO: handle exception
+    //     }
+    //     return arraylist;
+    // }
 
-    public ArrayList pollAnswer() {
-        // 질문과 답항을 불러오자
-        // 1. 먼저 답을 불러오자_hashmap을 arraylist로 넣는다.
-        // 참고 FactorysDao.java
+    // public ArrayList pollAnswer() {
+    //     // 질문과 답항을 불러오자
+    //     // 1. 먼저 답을 불러오자_hashmap을 arraylist로 넣는다.
+    //     // 참고 FactorysDao.java
         
-        ArrayList arraylist = new ArrayList();
-        Commons commons = new Commons();
-        Statement statement = commons.getStatement();
-        String query = "";
+    //     ArrayList arraylist = new ArrayList();
+    //     Commons commons = new Commons();
+    //     Statement statement = commons.getStatement();
+    //     String query = "";
 
-        try {
-            query = "SELECT CHOICE FROM choice;";
-            ResultSet resultset = statement.executeQuery(query);
-            HashMap hashmap = new HashMap<>();
-            while (resultset.next()) {
-                hashmap = new HashMap();
-                hashmap.put("CHOICE", resultset.getString("CHOICE"));
-                arraylist.add(hashmap);
-            }
+    //     try {
+    //         query = "SELECT CHOICE FROM choice;";
+    //         ResultSet resultset = statement.executeQuery(query);
+    //         HashMap<String, String> hashmap = new HashMap<>();
+    //         while (resultset.next()) {
+    //             hashmap = new HashMap();
+    //             hashmap.put("CHOICE", resultset.getString("CHOICE"));
+    //             arraylist.add(hashmap);
+    //         }
 
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-        return arraylist;
-    }
+    //     } catch (Exception e) {
+    //         // TODO: handle exception
+    //     }
+    //     return arraylist;
+    // }
 
-    // 회원DB연결 메소드(혜인)
+    // 회원리스트 메소드(혜인)
     public ArrayList SelectMembers() {
         ArrayList membersList = new ArrayList<>();
         try {
@@ -74,7 +74,7 @@ public class PollsDao {
             statement.executeQuery(query);
             ResultSet resultSet = statement.executeQuery(query);
 
-            HashMap members = new HashMap<>();
+            HashMap<String, String> members = new HashMap<>();
             while(resultSet.next()) {
                 members = new HashMap<>();
                 members.put("ID", "ID");
@@ -92,6 +92,4 @@ public class PollsDao {
         }
         return membersList;
     }
-
-   
 }

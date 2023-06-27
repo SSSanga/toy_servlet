@@ -21,9 +21,9 @@ public class surveyServlet extends HttpServlet{
 
             PollsDao pollsDao=new PollsDao();
             ArrayList arrayquestion = new ArrayList();
-            arrayquestion=pollsDao.pollQuestion();
+            // arrayquestion=pollsDao.pollQuestion();
             for (int first = 0; first <arrayquestion.size();first = first +1){
-                HashMap option
+
             }
             
             response.setContentType("text/html;charset=UTF-8");
