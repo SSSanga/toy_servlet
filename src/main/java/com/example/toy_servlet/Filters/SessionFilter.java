@@ -23,7 +23,7 @@ public class SessionFilter implements Filter  {
             // chain.doFilter(request, response);
             
             // 만약 필터 체인의 마지막 필터인 경우, 아래의 코드를 사용하여 실제 서블릿으로 제어를 전달할 수도 있습니다.
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/LoginPage");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/login.jsp");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
