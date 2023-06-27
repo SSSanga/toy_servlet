@@ -9,8 +9,8 @@ import java.sql.Statement;
 
 public class Commons {
     public Statement getStatement(){
-        String url = "jdbc:mysql://192.168.0.31:3306/db_pollsservlet";
-        String user = "yojulab";
+        String url = "jdbc:mysql://127.0.0.1:3306/db_pollsservlet";
+        String user = "root";
         String password ="!yojulab*";
         
         Statement statement = null;
@@ -19,6 +19,7 @@ public class Commons {
             statement = connection.createStatement();
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("ok");
         }
         return statement;
     }

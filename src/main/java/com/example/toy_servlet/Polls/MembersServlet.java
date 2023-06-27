@@ -38,7 +38,7 @@ public class MembersServlet extends HttpServlet {
                     "                  <th>\uC0C1\uC138\uC815\uBCF4</th>\r\n" + //
                     "                </tr>\r\n" + //
                     "            </thead>\r\n" + //
-                    "            <tbody>\r\n" + //
+                    "            <tbody>\r\n" ; //
             PollsDao pollsDao = new PollsDao();
             ArrayList membersList = new ArrayList<>();
             membersList = pollsDao.SelectMembers();
