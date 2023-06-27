@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -796.400015792847,
-    "scrollLeft": -86,
+    "scrollTop": -701.400015792847,
+    "scrollLeft": -367,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -97,7 +97,7 @@
           "active": false,
           "left": 1155.3847,
           "top": 1044.1089,
-          "zIndex": 5,
+          "zIndex": 3,
           "widthName": 78.5654296875,
           "widthComment": 60
         },
@@ -157,7 +157,7 @@
           {
             "name": "AGE",
             "comment": "나이",
-            "dataType": "INTEGER(50)",
+            "dataType": "VARCHAR(50)",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -172,10 +172,56 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 82.90087890625,
+              "widthDataType": 87.71875,
               "widthDefault": 60
             },
             "id": "8c49d666-9c09-43d3-b6ed-7e65d2e58043"
+          },
+          {
+            "name": "GENDER",
+            "comment": "성별",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "6cbd6da6-a2a6-416e-bc45-37753e02ad42"
+          },
+          {
+            "name": "ADDRESS",
+            "comment": "주소",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 64.84814453125,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "f85ef3f7-8b55-4ecd-8c27-10b8e8b0412e"
           },
           {
             "name": "RESPONDENTS_ID",
@@ -203,9 +249,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1140.3267,
-          "top": 851.793,
-          "zIndex": 15,
+          "left": 1019.2152,
+          "top": 716.2367,
+          "zIndex": 30,
           "widthName": 100.9599609375,
           "widthComment": 60
         },
@@ -311,9 +357,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 475.4742,
-          "top": 933.7151,
-          "zIndex": 16,
+          "left": 375.4747,
+          "top": 871.4931,
+          "zIndex": 4,
           "widthName": 75.1884765625,
           "widthComment": 60
         },
@@ -461,8 +507,8 @@
           "columnIds": [
             "2657cedd-e651-4e0a-984b-2a3a01884d7e"
           ],
-          "x": 1140.3267,
-          "y": 927.293,
+          "x": 1019.2152,
+          "y": 812.2367,
           "direction": "left"
         },
         "end": {
@@ -470,8 +516,8 @@
           "columnIds": [
             "50891920-19a2-43ee-82d9-7344bee0e646"
           ],
-          "x": 938.60652421875,
-          "y": 971.4651,
+          "x": 838.60702421875,
+          "y": 909.2431,
           "direction": "right"
         },
         "constraintName": "fk_polls_respondents_to_polls",
@@ -496,8 +542,8 @@
           "columnIds": [
             "d132b593-03e8-454a-8128-e0130037545d"
           ],
-          "x": 938.60652421875,
-          "y": 1046.9651,
+          "x": 838.60702421875,
+          "y": 984.7431,
           "direction": "right"
         },
         "constraintName": "fk_questions_to_statistics",
@@ -522,8 +568,8 @@
           "columnIds": [
             "0f19e1ce-3603-4dc2-933f-6cd4d9abdd0e"
           ],
-          "x": 707.040362109375,
-          "y": 1084.7151,
+          "x": 607.040862109375,
+          "y": 1022.4931,
           "direction": "bottom"
         },
         "constraintName": "fk_choice_to_statistics",
