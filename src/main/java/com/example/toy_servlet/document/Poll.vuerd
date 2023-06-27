@@ -109,6 +109,29 @@
         "comment": "설문자",
         "columns": [
           {
+            "name": "ID",
+            "comment": "아이디",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 87.71875,
+              "widthDefault": 60
+            },
+            "id": "aaf501d9-81c0-4c4f-852f-f1476bc7e582"
+          },
+          {
             "name": "RESPONDENTS",
             "comment": "설문자",
             "dataType": "VARCHAR(50)",
@@ -250,8 +273,8 @@
         "ui": {
           "active": false,
           "left": 1019.2152,
-          "top": 716.2367,
-          "zIndex": 30,
+          "top": 714.0145,
+          "zIndex": 20,
           "widthName": 100.9599609375,
           "widthComment": 60
         },
@@ -508,7 +531,7 @@
             "2657cedd-e651-4e0a-984b-2a3a01884d7e"
           ],
           "x": 1019.2152,
-          "y": 812.2367,
+          "y": 820.2645,
           "direction": "left"
         },
         "end": {

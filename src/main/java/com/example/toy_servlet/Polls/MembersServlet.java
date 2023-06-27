@@ -39,27 +39,20 @@ public class MembersServlet extends HttpServlet {
                     "                </tr>\r\n" + //
                     "            </thead>\r\n" + //
                     "            <tbody>\r\n" + //
-                    "                <tr>\r\n" + //
-                    "                  <td>aaa999</td>\r\n" + //
-                    "                  <td>\uD64D\uAE38\uB3D9</td>\r\n" + //
-                    "                  <td><button type=\"submit\" class=\"btn  btn-primary btn-sm\">\uBCF4\uAE30</button></td>\r\n" + //
-                    "                </tr>\r\n" + //
-                    "                <tr>\r\n" + //
-                    "                  <td>bbb888</td>\r\n" + //
-                    "                  <td>\uC7A5\uAE38\uC0B0</td>\r\n" + //
-                    "                  <td><button type=\"submit\" class=\"btn  btn-primary btn-sm\">\uBCF4\uAE30</button></td>\r\n" + //
-                    "                </tr>\r\n" + //
-                    "                <tr>\r\n" + //
-                    "                    <td>ccc777</td>\r\n" + //
-                    "                    <td>\uC2E0\uC0AC\uC784\uB2F9</td>\r\n" + //
-                    "                    <td><button type=\"submit\" class=\"btn  btn-primary btn-sm\">\uBCF4\uAE30</button></td>\r\n" + //
-                    "                  </tr>\r\n" + //
-                    "                  <tr>\r\n" + //
-                    "                    <td>ddd666</td>\r\n" + //
-                    "                    <td>\uAE40\uCCA0\uC218</td>\r\n" + //
-                    "                  <td><button type=\"submit\" class=\"btn  btn-primary btn-sm\">\uBCF4\uAE30</button></td>\r\n" + //
-                    "                  </tr>\r\n" + //
-                    "        </table>\r\n" + //
+            PollsDao pollsDao = new PollsDao();
+            ArrayList membersList = new ArrayList<>();
+            membersList = pollsDao.SelectMembers();
+            for (int i =0; i < membersList.size(); i= i+1 ) {
+                HashMap members = new HashMap<>();
+                members = (HashMap) membersList.get(i);
+                contents = contents + "<tr>\r\n" + //
+                    " <td>"+members.get("ID")+"</td>\r\n" + //
+                    " <td>"+members.get("NAME")+"</td>\r\n" + //
+                    " <td><button type=\"submit\" class=\"btn  btn-primary btn-sm\">\uBCF4\uAE30</button></td>\r\n" + //
+                    " </tr>\r\n"; //
+            }
+                                  
+                   contents = contents + "        </table>\r\n" + //
                     "        </form> \r\n" + //
                     "    </div>\r\n" + //
                     "</body>\r\n" + //
@@ -67,13 +60,8 @@ public class MembersServlet extends HttpServlet {
                     "</html>";
         
             
-            PollsDao pollsDao = new PollsDao();
-            ArrayList membersList = new ArrayList<>();
-            membersList = pollsDao.SelectMembers();
-            for (int i =0; i < membersList.size(); i= i+1 ) {
-                HashMap members = new HashMap<>();
-                members = (HashMap) membersList.get(i);
-            }
+            
+
 
 
             response.setContentType("text/html;charset=UTF-8");
