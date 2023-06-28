@@ -35,7 +35,7 @@ public class LoginCreateServlet extends HttpServlet{
                 if ("yojulab".equals(username) && "1234".equals(password)) {
                     httpSession.setAttribute("username", username);
                     httpSession.setAttribute("password", password);
-                    printWriter.println("<div>" + username + ", " + password + "</div>");
+                     response.sendRedirect("/");
                 } else {
                     printWriter.println("<div>Faild</div>");
                 }
