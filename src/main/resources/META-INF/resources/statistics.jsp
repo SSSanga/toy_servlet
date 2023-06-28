@@ -28,11 +28,11 @@
             <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
               <button type="button" class="btn btn-outline-primary me-2" >Login</button>
           </form>
-          </div>
-    <div class="text-center">
+
+    <div class="container text-center">
         <div class="h2">
         설문 통계
-    </div>
+        </div>
         <thead>
             <tr>
                 <td>참여자 총 인원</td>
@@ -44,8 +44,8 @@
                 <td><%= request.getAttribute("TOTAL") %> 명</td>
             </tr>
         </tbody>
-
     </div>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
