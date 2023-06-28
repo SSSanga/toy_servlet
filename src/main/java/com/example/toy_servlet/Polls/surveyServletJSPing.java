@@ -33,6 +33,8 @@ public class surveyServletJSPing extends HttpServlet {
             // contents = contents + (String) hashmap.get("QUESTIONS"); // 질문1개 나오면 다음
             // selectAll로 넘어가서 CHOICE 출력한다.
 
+
+
             request.setAttribute("arrayquest", arrayquest);
 
             // printWriter.println();
@@ -44,7 +46,7 @@ public class surveyServletJSPing extends HttpServlet {
             // contents = contents + (String) hashmap.get("CHOICE");
             request.setAttribute("arraychoice", arraychoice);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/survey.jsp");
             requestDispatcher.forward(request, response);
             // printWriter.println(contents);
             // printWriter.close();

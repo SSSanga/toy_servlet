@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.toy_servlet.Daos.PollsDao;
 
-@WebServlet(urlPatterns = "/surveyStatistic")
-public class surveyStatistic extends HttpServlet {
+@WebServlet(urlPatterns = "/surveyquestJSP")
+public class surveyquestJSP extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -23,8 +23,7 @@ public class surveyStatistic extends HttpServlet {
             String contents = "";
             response.setContentType("text/html;charset=UTF-8");
             PrintWriter printWriter = response.getWriter();
-            HashMap hashmap = new HashMap<>();
-
+            HashMap hashquest = new HashMap<>();
             PollsDao pollsDao = new PollsDao();
             ArrayList arrayquest = new ArrayList<>();
             arrayquest = pollsDao.SelectQuest();
@@ -36,15 +35,15 @@ public class surveyStatistic extends HttpServlet {
             request.setAttribute("arrayquest", arrayquest);
 
             // printWriter.println();
-            ArrayList arraychoice = new ArrayList<>();
-            arraychoice = pollsDao.selectAll(); // 답안=CHOICE 출력_HASHMAP으로 풀다
-            // for (int first = 0; first < arraychoice.size(); first = first + 1) {
+            // ArrayList arraychoice = new ArrayList<>();
+            // arraychoice = pollsDao.selectAll(); // 답안=CHOICE 출력_HASHMAP으로 풀다
+            // // for (int first = 0; first < arraychoice.size(); first = first + 1) {
 
-            // hashmap = (HashMap) arraychoice.get(first);
-            // contents = contents + (String) hashmap.get("CHOICE");
-            request.setAttribute("arraychoice", arraychoice);
+            // // hashmap = (HashMap) arraychoice.get(first);
+            // // contents = contents + (String) hashmap.get("CHOICE");
+            // request.setAttribute("arraychoice", arraychoice);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/survey.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/surveyquest.jsp");
             requestDispatcher.forward(request, response);
             // printWriter.println(contents);
             // printWriter.close();
