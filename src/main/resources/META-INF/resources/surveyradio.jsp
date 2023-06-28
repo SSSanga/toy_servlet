@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-    <%@ page import="java.util.HashMap, java.util.ArrayList" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -28,6 +28,7 @@
                     <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
                       <button type="button" class="btn btn-outline-primary me-2" >Login</button>
                   </form>
+            </div>
             <div class="container justify-content-center mt-5">
                 <table class="table table-bordered table-hover">
                     <thead>

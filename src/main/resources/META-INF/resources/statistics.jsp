@@ -28,7 +28,7 @@
             <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
               <button type="button" class="btn btn-outline-primary me-2" >Login</button>
           </form>
-
+    </div>
     <div class="container text-center">
         <div class="h2">
         설문 통계
