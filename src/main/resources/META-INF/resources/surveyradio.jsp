@@ -25,9 +25,9 @@
                   </ul>
             
                   <div class="col-md-3 text-end">
-                    <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
-                      <button type="button" class="btn btn-outline-primary me-2" >Login</button>
-                  </form>
+                    <form action="/MainServlet">
+                        <button type="submit" class="btn btn-outline-primary me-2" >Home</button>
+                    </form>
             </div>
             <div class="container justify-content-center mt-5">
                 <table class="table table-bordered table-hover">
@@ -56,7 +56,7 @@
                                                         <tr>
                                                             <td>
                                                                 <input id="" name="choice" type="radio"
-                                                                    class="form-check-input" checked="" required=""
+                                                                    class="form-check-input"
                                                                     value="<%= hashchoice.get(" CHOICE") %>">
                                                                 <%= hashchoice.get("CHOICE") %>
                                                             </td>

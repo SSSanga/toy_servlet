@@ -23,8 +23,8 @@
           </ul>
     
           <div class="col-md-3 text-end">
-            <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
-              <button type="button" class="btn btn-outline-primary me-2" >Login</button>
+            <form action="/MainServlet">
+              <button type="submit" class="btn btn-outline-primary me-2" >Home</button>
           </form>
           </div>
         </header>
