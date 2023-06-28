@@ -1,4 +1,4 @@
-package com.example.toy_servlet.Polls;
+package com.example.toy_servlet.controlls;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.example.toy_servlet.Daos.PollsDao;
 
 @WebServlet(urlPatterns = "/surveyStatistic")
-public class surveyStatistic extends HttpServlet {
+public class StatisticServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
