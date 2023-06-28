@@ -86,7 +86,7 @@ public class PollsDao {
 
             }
         } catch (Exception e) {
-           System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
         return membersList;
     }
@@ -117,14 +117,14 @@ public class PollsDao {
 
             }
         } catch (Exception e) {
-           System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
         return membersList;
     }
 
     // 통계 메서드(혜인)
     public int replyCount() {
-        int total=0;
+        int total = 0;
         try {
             Commons commons = new Commons();
             Statement statement = commons.getStatement();
@@ -137,7 +137,6 @@ public class PollsDao {
                 System.out.println(resultSet.getInt("TOTAL"));
                 total = resultSet.getInt("TOTAL");
             }
-            
 
         } catch (Exception e) {
 
