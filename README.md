@@ -1,15 +1,21 @@
-format 형식은 원희님꺼 복붙..
-## 6월 26 ~ 6월 실습
+## 실습
+-기간: 6월 27일~ 6월 28일 
+
+## MEMBERS & PART
+-김명곤 
+[LOGIN/LOGOUT](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/LoginCreateServlet.java)
+[FILTERS]
+(https://github.com/SSSanga/toy_servlet/tree/main/src/main/java/com/example/toy_servlet/Filters)
+
+-김혜인
+[MEMBERS_LIST]
+(https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersServlet.java)
+[MEMBER_DETAIL]
+(https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersInfoServlet.java)
+
+-김상아
+[]
 
 
-
-## HTML MADE BY 명곤
-
-
-## LOGIN_COOKIE, SESSION_명곤
-
-## 회원 관리 및 상세정보_혜인
-
-## 설문_상아
 
 
