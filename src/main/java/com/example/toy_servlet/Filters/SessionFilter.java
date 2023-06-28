@@ -9,7 +9,7 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-// @WebFilter("/*") // 모든 URL 패턴에 필터를 적용합니다.
+// @WebFilter(urlPatterns = "") // 모든 URL 패턴에 필터를 적용합니다.
 public class SessionFilter implements Filter  {
     
     @Override
