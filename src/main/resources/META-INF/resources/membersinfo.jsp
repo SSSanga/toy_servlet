@@ -43,7 +43,6 @@
             </thead>
             <%
             ArrayList infor = new ArrayList();
-            name = (ArrayList) request.getAttribute("name");   
             infor = (ArrayList) request.getAttribute("infor");
             %>
             <tbody>
