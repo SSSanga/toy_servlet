@@ -70,15 +70,14 @@
                 <div>
                     User Name: <%= usernameSession %>
                 </div>
+                <P>
                 <div class="form-floating">
                     <form action="/Login/DeleteServlet">
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Logout</button>
                     </form>
                 </div>
             <% } %>
-            <div>
-                Code Value: <%= request.getAttribute("contents") %>
-            </div>
+        
         </main>
     </div>
 </body>

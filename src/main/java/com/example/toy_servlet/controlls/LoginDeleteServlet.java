@@ -32,16 +32,12 @@ public class LoginDeleteServlet extends HttpServlet {
                     response.addCookie(cookie);
                 } 
             }
-
-            PrintWriter printWriter = response.getWriter();
-            String contents = "<div>Logout !</div>";
-            printWriter.println(contents);
-            printWriter.close();
+            response.sendRedirect("/LoginPageServlet"); 
+          
+            
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        super.doGet(request, response);
     }
-
 }
 
