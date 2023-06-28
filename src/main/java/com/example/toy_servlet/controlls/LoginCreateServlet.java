@@ -2,6 +2,7 @@ package com.example.toy_servlet.controlls;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,12 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.example.toy_servlet.Daos.PollsID_PW;
+
 @WebServlet(urlPatterns = "/Login/CreateServlet")
 public class LoginCreateServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-
+            PollsID_PW pollsID_PW = new PollsID_PW();
+            HashMap id_pw = pollsID_PW.selectAll();
             String username = request.getParameter("username");
             String password = request.getParameter("password");
 
@@ -32,8 +36,8 @@ public class LoginCreateServlet extends HttpServlet{
                 printWriter.println("<div>username : "+usernameSession+"</div>");
             } else { // 없음 : 로그인
                 httpSession = request.getSession();   //오류 방어 코드
-                if ("yojulab".equals(username) && "1234".equals(password)) {
-                    httpSession.setAttribute("username", username);
+                if (id_pw.containsKey(username)&&id_pw.get(username).equals(password)) { //
+                    httpSession.setAttribute("username", username); 
                     httpSession.setAttribute("password", password);
                      response.sendRedirect("/surveyServletJSPing");  
                 } else {
