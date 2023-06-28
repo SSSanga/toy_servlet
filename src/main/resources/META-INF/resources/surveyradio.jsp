@@ -49,7 +49,7 @@
                                     <% } %>
                                         <tr>
                                             <td>
-                                                <form action="">
+                                                <form action="/StatisticsServlet">
                                                     <button class="w-100 btn btn-lg btn-primary"
                                                         type="submit">SUBMIT</button>
                                                 </form>
