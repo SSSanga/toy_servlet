@@ -44,7 +44,7 @@ public class surveyStatistic extends HttpServlet {
             // contents = contents + (String) hashmap.get("CHOICE");
             request.setAttribute("arraychoice", arraychoice);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/survey.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey.jsp");
             requestDispatcher.forward(request, response);
             // printWriter.println(contents);
             // printWriter.close();

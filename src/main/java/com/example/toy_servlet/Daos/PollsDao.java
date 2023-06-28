@@ -61,10 +61,7 @@ public class PollsDao {
         return arraylist;
     }
 
-    // 회원DB연결 메소드(혜인)
-
     // 회원리스트 메소드(혜인)
-
     public ArrayList SelectMembers() {
         ArrayList membersList = new ArrayList<>();
         try {
@@ -94,6 +91,7 @@ public class PollsDao {
         return membersList;
     }
 
+    // 회원 상세정보 메서드(헤인)
     public ArrayList InfoMembers(String name) {
         ArrayList membersList = new ArrayList<>();
         try {
@@ -124,19 +122,19 @@ public class PollsDao {
         return membersList;
     }
 
+    // 통계 메서드(혜인)
     public int replyCount() {
-        // 임의 statistic
         try {
             Commons commons = new Commons();
             Statement statement = commons.getStatement();
             String query = "SELECT COUNT(*)\n" + //
-                    "FROM statistics\n" + //
-                    "WHERE RESPONDENTS_ID ='R-01'";
+                    "FROM (SELECT COUNT(*)\n" + //
+                    "\tFROM statistics\n" + //
+                    "\tGROUP BY RESPONDENTS_ID) AS CNT;'";
             ResultSet resultSet = statement.executeQuery(query);
             HashMap collect = new HashMap<>();
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt("RESPONDENTS_ID"));
-
             }
 
         } catch (Exception e) {

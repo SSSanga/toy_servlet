@@ -32,7 +32,7 @@ public class MembersInfoServlet extends HttpServlet {
 
             response.setContentType("text/html;charset=UTF-8");
             // 다음 파일 호출
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/membersinfo.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/membersinfo.jsp");
             requestDispatcher.forward(request, response);
         } catch (Exception e) {
             System.out.println(e.getMessage());
