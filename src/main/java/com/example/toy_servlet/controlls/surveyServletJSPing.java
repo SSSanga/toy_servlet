@@ -1,4 +1,4 @@
-package com.example.toy_servlet.Polls;
+package com.example.toy_servlet.controlls;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.example.toy_servlet.Daos.PollsDao;
 
-@WebServlet(urlPatterns = "/surveyStatistic")
-public class surveyStatistic extends HttpServlet {
+@WebServlet(urlPatterns = "/surveyServletJSPing")
+public class surveyServletJSPing extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -33,6 +33,8 @@ public class surveyStatistic extends HttpServlet {
             // contents = contents + (String) hashmap.get("QUESTIONS"); // 질문1개 나오면 다음
             // selectAll로 넘어가서 CHOICE 출력한다.
 
+
+
             request.setAttribute("arrayquest", arrayquest);
 
             // printWriter.println();
@@ -44,7 +46,7 @@ public class surveyStatistic extends HttpServlet {
             // contents = contents + (String) hashmap.get("CHOICE");
             request.setAttribute("arraychoice", arraychoice);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/survey.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/survey.jsp");
             requestDispatcher.forward(request, response);
             // printWriter.println(contents);
             // printWriter.close();
