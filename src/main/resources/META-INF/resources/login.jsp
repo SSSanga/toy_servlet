@@ -30,7 +30,7 @@
               </a>
         
               <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="survey.html" class="nav-link px-2 link-secondary">설문</a></li>
+                <li><a href="/surveyServletJSPing" class="nav-link px-2 link-secondary">설문</a></li>
                 <li><a href="/MembersServlet" class="nav-link px-2 link-dark">회원</a></li>
                 <li><a href="/StatisticsServlet" class="nav-link px-2 link-dark">통계</a></li>
               </ul>

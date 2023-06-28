@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Main</title>
 </head>
 
 <body>
@@ -18,15 +18,13 @@
           </a>
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="survey.html" class="nav-link px-2 link-secondary">설문</a></li>
-            <li><a href="members.html" class="nav-link px-2 link-dark">회원</a></li>
-            <li><a href="statistics.html" class="nav-link px-2 link-dark">통계</a></li>
+            <li><a href="/surveyServletJSPing" class="nav-link px-2 link-secondary">설문</a></li>
+                <li><a href="/MembersServlet" class="nav-link px-2 link-dark">회원</a></li>
+                <li><a href="/StatisticsServlet" class="nav-link px-2 link-dark">통계</a></li>
           </ul>
     
           <div class="col-md-3 text-end">
-            <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
-              <button type="button" class="btn btn-outline-primary me-2" >Login</button>
-          </form>
+              <button type="button" formaction="/LoginPageServlet" class="btn btn-outline-primary me-2" >Login</button>
           </div>
         </header>
       </div>

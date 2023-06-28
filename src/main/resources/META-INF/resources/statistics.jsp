@@ -19,20 +19,20 @@
           </a>
     
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="survey.html" class="nav-link px-2 link-secondary">설문</a></li>
-            <li><a href="members.html" class="nav-link px-2 link-dark">회원</a></li>
-            <li><a href="statistics.html" class="nav-link px-2 link-dark">통계</a></li>
+            <li><a href="/surveyServletJSPing" class="nav-link px-2 link-secondary">설문</a></li>
+                <li><a href="/MembersServlet" class="nav-link px-2 link-dark">회원</a></li>
+                <li><a href="/StatisticsServlet" class="nav-link px-2 link-dark">통계</a></li>
           </ul>
     
           <div class="col-md-3 text-end">
             <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
               <button type="button" class="btn btn-outline-primary me-2" >Login</button>
           </form>
-          </div>
-    <div class="text-center">
+
+    <div class="container text-center">
         <div class="h2">
         설문 통계
-    </div>
+        </div>
         <thead>
             <tr>
                 <td>참여자 총 인원</td>
@@ -44,8 +44,8 @@
                 <td><%= request.getAttribute("TOTAL") %> 명</td>
             </tr>
         </tbody>
-
     </div>
+
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
