@@ -38,7 +38,7 @@ public class LoginCreateServlet extends HttpServlet{
                      response.sendRedirect("/surveyServletJSPing");
                 } else {
                     printWriter.println("<div>Faild</div>");
-                     response.sendRedirect("login.jsp?error=true");
+                     response.sendRedirect("/LoginPageServlet");
                 }
             }
 

@@ -36,7 +36,7 @@
               </ul>
         
               <div class="col-md-3 text-end">
-                <form action="C:\Develops\toy_servlet\src\main\resources\META-INF\resources\poll\login.jsp">
+                <form action="/src/main/java/com/example/toy_servlet/controlls/surveyServletJSPing.java">
                   <button type="button" class="btn btn-outline-primary me-2" >Login</button>
               </form>
               </div>
@@ -47,7 +47,7 @@
             String usernameSession = (String) session.getAttribute("username");
 
             if (usernameSession == null) { %>
-                <form action="/surveyradio.jsp" method="get">
+                <form action="/Login/CreateServlet" method="get">
                     <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
                     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                     <div class="form-floating">
