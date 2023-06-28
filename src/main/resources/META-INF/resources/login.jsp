@@ -37,7 +37,7 @@
         
               <div class="col-md-3 text-end">
                 <form action="/src/main/java/com/example/toy_servlet/controlls/surveyServletJSPing.java">
-                  <button type="button" class="btn btn-outline-primary me-2" >Login</button>
+                  <button type="button" class="btn btn-outline-primary me-2"  >Login</button>
               </form>
               </div>
             </header>
@@ -71,15 +71,14 @@
                 <div>
                     User Name: <%= usernameSession %>
                 </div>
+                <P>
                 <div class="form-floating">
                     <form action="/Login/DeleteServlet">
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Logout</button>
                     </form>
                 </div>
             <% } %>
-            <div>
-                Code Value: <%= request.getAttribute("contents") %>
-            </div>
+        
         </main>
     </div>
 </body>
