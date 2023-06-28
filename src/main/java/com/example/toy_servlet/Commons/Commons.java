@@ -13,13 +13,9 @@ import java.util.UUID;
 public class Commons {
     public Statement getStatement(){
         
-        // String url = "jdbc:mysql://127.0.0.1:3306/db_pollsservlet";
-        // String user = "root";
-        // String password ="!yojulab";
-        
-        String url = "jdbc:mysql://127.0.0.1:3306/db_pollsservlet";
+        String url = "jdbc:mysql://192.168.0.31:3306/db_pollsservlet";
         String user = "root";
-        String password ="!yojulab*";
+        String password ="!yojulab";
 
         // String url = "jdbc:mysql://192.168.0.224:3306/db_pollsservlet";
         // String user = "yojulab";
