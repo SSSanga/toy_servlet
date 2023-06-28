@@ -46,7 +46,7 @@ public class surveyServletJSPing extends HttpServlet {
             // contents = contents + (String) hashmap.get("CHOICE");
             request.setAttribute("arraychoice", arraychoice);
 
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/poll/survey.jsp");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/surveyradio.jsp");
             requestDispatcher.forward(request, response);
             // printWriter.println(contents);
             // printWriter.close();

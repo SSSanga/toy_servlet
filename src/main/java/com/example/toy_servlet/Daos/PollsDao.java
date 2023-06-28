@@ -124,22 +124,24 @@ public class PollsDao {
 
     // 통계 메서드(혜인)
     public int replyCount() {
+        int total=0;
         try {
             Commons commons = new Commons();
             Statement statement = commons.getStatement();
-            String query = "SELECT COUNT(*)\n" + //
+            String query = "SELECT COUNT(*) AS TOTAL\n" + //
                     "FROM (SELECT COUNT(*)\n" + //
                     "\tFROM statistics\n" + //
-                    "\tGROUP BY RESPONDENTS_ID) AS CNT;'";
+                    "\tGROUP BY RESPONDENTS_ID) AS CNT;";
             ResultSet resultSet = statement.executeQuery(query);
-            HashMap collect = new HashMap<>();
             while (resultSet.next()) {
-                System.out.println(resultSet.getInt("RESPONDENTS_ID"));
+                System.out.println(resultSet.getInt("TOTAL"));
+                total = resultSet.getInt("TOTAL");
             }
+            
 
         } catch (Exception e) {
 
         }
-        return 0;
+        return total;
     }
 }
