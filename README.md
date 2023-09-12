@@ -5,7 +5,7 @@
 
 ## ERD 작성 및 DB 구축
 
-  ![Alt text](./bin/main/static/images/ERD%20PNG.png)
+  ![Alt text](./src/main/resources/static/images/ERD%20PNG.png)
 
 ## 팀원 및 역할
 
@@ -15,8 +15,8 @@
 
   - 주요 code 및 결과 page 
 
-      ![Alt text](./bin/main/static/images/주요코드_명곤(로그인페이지).png)
-      ![Alt text](./bin/main/static/images/주요화면_명곤(로그인).png)
+      ![Alt text](./src/main/resources/static/images/주요코드_명곤(로그인페이지).png)
+      ![Alt text](./src/main/resources/static/images/주요화면_명곤(로그인).png)
 
 - 김혜인
   - [MEMBERS_LIST](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersServlet.java)
@@ -25,12 +25,12 @@
   - 주요 code 및 결과 page 
       
       
-      ![Alt text](./bin/main/static/images/주요코드_혜인(회원).png)
-      ![Alt text](./bin/main/static/images/주요화면_혜인(회원).png)
-      ![Alt text](./bin/main/static/images/주요코드_혜인(회원상세정보).png)
-      ![Alt text](./bin/main/static/images/주요화면_혜인(회원상세정보).png)
-      ![Alt text](./bin/main/static/images/주요코드_혜인(통계_총인원).png)
-      ![Alt text](./bin/main/static/images/주요코드_혜인(설문통계).PNG)
+      ![Alt text](./src/main/resources/static/images/주요코드_혜인(회원).png)
+      ![Alt text](./src/main/resources/static/images/주요화면_혜인(회원).png)
+      ![Alt text](./src/main/resources/static/images/주요코드_혜인(회원상세정보).png)
+      ![Alt text](./src/main/resources/static/images/주요화면_혜인(회원상세정보).png)
+      ![Alt text](./src/main/resources/static/images/주요코드_혜인(통계_총인원).png)
+      ![Alt text](./src/main/resources/static/images/주요코드_혜인(설문통계).PNG)
       
       
 
@@ -39,13 +39,13 @@
 
   - 주요 code 및 결과 page 
 
-    ![Alt text](./bin/main/static/images/주요코드_상아(답안).png)
-    ![Alt text](./bin/main/static/images/주요코드_상아(질문).png)
-    ![Alt text](./bin/main/static/images/주요화면_상아(설문).png)
+    ![Alt text](./src/main/resources/static/images/주요코드_상아(답안).png)
+    ![Alt text](./src/main/resources/static/images/주요코드_상아(질문).png)
+    ![Alt text](./src/main/resources/static/images/주요화면_상아(설문).png)
 
 ### 홈페이지 동작 결과물 
 
-![Alt text](./bin/main/static/images/ㄱㄱㄱ.gif)
+![Alt text](./src/main/resources/static/images/ㄱㄱㄱ.gif)
 
 
 ## 실습소감
