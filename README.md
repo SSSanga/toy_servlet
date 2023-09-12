@@ -14,7 +14,6 @@
   - [FILTERS](https://github.com/SSSanga/toy_servlet/tree/main/src/main/java/com/example/toy_servlet/Filters)
 
   - 결과 page
-
       - 로그인
       ![Alt text](./src/main/resources/static/images/주요화면_명곤(로그인).png)
 
