@@ -9,7 +9,6 @@
   - [FILTERS](https://github.com/SSSanga/toy_servlet/tree/main/src/main/java/com/example/toy_servlet/Filters)
 
   - 주요 code 및 결과 page 
-  ![Alt text](images/image.png)
 
 
 - 김혜인
@@ -17,18 +16,17 @@
   - [MEMBER_DETAIL](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersInfoServlet.java)
 
   - 주요 code 및 결과 page 
-  ![Alt text](images/image-2.png) 
-  ![Alt text](images/image-3.png) 
-  ![Alt text](images/image-4.png)
+
 
 - 김상아
   - [SURVEY](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/surveyServletJSPing.java)
 
   - 주요 code 및 결과 page 
-  ![Alt text](images/image-1.png)
+
 
 ## 홈페이지 동작 결과물 
 ![Alt text](images/ㄱㄱㄱ.gif)
+
 
 ## 실습소감
 - 혜인: 각자 맡은 파트가 다르다 보니 제가 하지 않은 부분은 내 것으로 만들지 못한 점이 아쉬웠습니다. 그렇지만 팀 과제를 통해서 서로 소통하는 것을 배울 수 있었고 내가 맡은 부분에 대해서 조금 더 이해할 수 있었던 시간이었습니다. 
