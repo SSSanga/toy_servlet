@@ -13,23 +13,22 @@
   - [LOGIN/LOGOUT](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/LoginCreateServlet.java)
   - [FILTERS](https://github.com/SSSanga/toy_servlet/tree/main/src/main/java/com/example/toy_servlet/Filters)
 
-  - 주요 code 및 결과 page 
+  - 결과 page
 
-      ![Alt text](./src/main/resources/static/images/주요코드_명곤(로그인페이지).png)
+      - 로그인
       ![Alt text](./src/main/resources/static/images/주요화면_명곤(로그인).png)
 
 - 김혜인
   - [MEMBERS_LIST](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersServlet.java)
   - [MEMBER_DETAIL](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersInfoServlet.java)
 
-  - 주요 code 및 결과 page 
-      
-      
-      ![Alt text](./src/main/resources/static/images/주요코드_혜인(회원).png)
+  - 결과 page 
+
+      - 회원 리스트  
       ![Alt text](./src/main/resources/static/images/주요화면_혜인(회원).png)
-      ![Alt text](./src/main/resources/static/images/주요코드_혜인(회원상세정보).png)
+      - 회원 상세정보
       ![Alt text](./src/main/resources/static/images/주요화면_혜인(회원상세정보).png)
-      ![Alt text](./src/main/resources/static/images/주요코드_혜인(통계_총인원).png)
+      - 설문자 합계 
       ![Alt text](./src/main/resources/static/images/주요코드_혜인(설문통계).PNG)
       
       
@@ -37,10 +36,9 @@
 - 김상아
   - [SURVEY](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/surveyServletJSPing.java)
 
-  - 주요 code 및 결과 page 
-
-    ![Alt text](./src/main/resources/static/images/주요코드_상아(답안).png)
-    ![Alt text](./src/main/resources/static/images/주요코드_상아(질문).png)
+  - 결과 page 
+    
+    - 설문지  
     ![Alt text](./src/main/resources/static/images/주요화면_상아(설문).png)
 
 ### 홈페이지 동작 결과물 
