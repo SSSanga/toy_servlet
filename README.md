@@ -15,8 +15,8 @@
 
   - 주요 code 및 결과 page 
 
-      ![Alt text](./bin/main/static/images/주요코드_명곤(로그인페이지).png)
-      ![Alt text](./bin/main/static/images/주요화면_명곤(로그인).png)
+      ![Alt text](/bin/main/static/images/주요코드_명곤(로그인페이지).png)
+      ![Alt text](/bin/main/static/images/주요화면_명곤(로그인).png)
 
 - 김혜인
   - [MEMBERS_LIST](https://github.com/SSSanga/toy_servlet/blob/main/src/main/java/com/example/toy_servlet/controlls/MembersServlet.java)
